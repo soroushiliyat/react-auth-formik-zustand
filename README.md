@@ -1,73 +1,59 @@
-# React + TypeScript + Vite
+# 🔐 React Auth Formik Zustand
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern authentication interface built with React, Formik, Yup, Zustand, and Tailwind CSS — featuring clean form validation, token-based login, and responsive design.
 
-Currently, two official plugins are available:
+🎯 [Live Demo](https://react-auth-formik-zustand.vercel.app/)  
+📦 [GitHub Repository](https://github.com/soroushiliyat/react-auth-formik-zustand)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 👨‍💻 About This Project
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+This project is part of my portfolio for remote frontend roles with European tech companies. It demonstrates my ability to:
 
-## Expanding the ESLint configuration
+- Build clean and validated signup/login forms
+- Manage global authentication state using Zustand
+- Handle API communication with Axios
+- Apply responsive and modern UI with Tailwind CSS
+- Implement token-based login and conditional rendering
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🧰 Tech Stack
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+| Tool / Library | Purpose |
+|----------------|---------|
+| **React** | UI framework |
+| **Formik + Yup** | Form handling and validation |
+| **Zustand** | Global state management |
+| **Axios** | API requests |
+| **Tailwind CSS** | Styling and layout |
+| **Vite** | Fast development environment |
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🚀 Features
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- Signup and login forms with client-side validation
+- Token storage and login state management
+- Conditional UI based on authentication
+- Responsive design for desktop and mobile
+- Navigation between routes using React Router
+- Live demo deployed on Vercel
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
+
+## 📂 Folder Structure
+
+src/ ├── api/             # Axios functions for login/signup ├── pages/           # SignupForm, LoginForm, Home ├── store/           # Zustand auth store ├── App.tsx          # Route definitions ├── main.tsx         # Entry point with BrowserRoute
+
+
+---
+
+## 🛠️ Getting Started Locally
+
+```bash
+git clone https://github.com/soroushiliyat/react-auth-formik-zustand.git
+cd react-auth-formik-zustand
+npm install
+npm run dev
