@@ -1,10 +1,13 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { sendLoginData } from "../api/auth";
 import { useAuthStore } from "../store/authStore";
+import { useNavigate } from "react-router-dom";
 
 const LoginForm = () => {
   const setToken = useAuthStore((state) => state.setToken);
+  const navigate = useNavigate();
 
   return (
     <div className="max-w-md mx-auto mt-10 p-6 bg-white rounded shadow">
@@ -20,6 +23,7 @@ const LoginForm = () => {
             const res = await sendLoginData(values);
             setToken(res.data.token);
             alert("Login successful!");
+            navigate("/");
           } catch (err) {
             setErrors({ password: "Invalid credentials" });
           } finally {
