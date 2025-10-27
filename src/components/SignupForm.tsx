@@ -1,10 +1,13 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { sendSignupData } from "../api/auth";
 import { useAuthStore } from "../store/authStore";
+import { useNavigate } from "react-router-dom";
 
 const SignupForm = () => {
   const setToken = useAuthStore((state) => state.setToken);
+  const navigate = useNavigate();
 
   return (
     <div className="max-w-md mx-auto mt-10 p-6 bg-white rounded shadow">
@@ -21,6 +24,7 @@ const SignupForm = () => {
             const res = await sendSignupData(values);
             setToken(res.data.token);
             alert("Signup successful!");
+            navigate("/login");
           } catch (err) {
             setErrors({ email: "Signup failed. Try again." });
           } finally {
