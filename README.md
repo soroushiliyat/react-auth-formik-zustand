@@ -3,7 +3,7 @@
 A modern authentication interface built with React, Formik, Yup, Zustand, and Tailwind CSS — featuring clean form validation, token-based login, and responsive design.
 
 🎯 [Live Demo](https://react-auth-formik-zustand.vercel.app/)  
-📦 [GitHub Repository](https://github.com/soroushiliyat/react-auth-formik-zustand)
+
 
 ---
 
